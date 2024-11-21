@@ -1,14 +1,14 @@
-
+###
 POST  http://127.0.0.1:3000/auth/register
 content-Type: application/json
 
 {
     "name":"prueba",
     "email": "teckalan2@gmail.com",
-    "password": "12345"
+    "password": "123456"
 }
 
-#login sin conexion a BDD
+#####login sin conexion a BDD
 
 POST http://127.0.0.1:3000/auth/login
 content-Type: application/json
@@ -16,11 +16,11 @@ content-Type: application/json
 {
     "name":"prueba2",
     "email": "teckalan2@gmail.com",
-    "password": "12345"
+    "password": "123456"
 }
 
 
-#USERS
+####USERS
 
 GET http://127.0.0.1:3000/users
-Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MzIxNTI4NjMsImV4cCI6MTczMjE1MjkyM30.06p1O6XR-6u9wFnyuJ06GKwSF4nbqCGmXtGUkQ5rZH0
