@@ -1,4 +1,4 @@
-import { Persona } from "src/modules/persona/entities/persona.entity";
+import { Persona } from "../../persona/entities/persona.entity";
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()

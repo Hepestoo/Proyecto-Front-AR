@@ -3,7 +3,7 @@ import { DataSource } from "typeorm"
 
 export const databaseProvider=[
     {
-        provide: 'DATABASE_CONNECTION',
+        provide: 'DATABASE_CONNECTION_POSTGRES',
         inject: [ConfigService],
         useFactory:(config: ConfigService)=>{
             const dataSource = new DataSource({

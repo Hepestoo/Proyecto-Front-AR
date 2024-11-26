@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { databaseProvider } from './database.provides';
+import { databaseProvider } from './database.providers';
 import { ConfigService } from 'src/config/config.service';
 import { TypeORMError } from 'typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -10,7 +10,7 @@ import { config } from 'dotenv';
     imports:[
         TypeOrmModule.forRootAsync({
             imports:[ConfigModule],
-            inject:[ConfigModule],
+            inject:[ConfigService],
             useFactory:(config: ConfigService)=>({
                 type:'postgres',
                 host:config.get('HOST') || 'localhost',
@@ -20,7 +20,7 @@ import { config } from 'dotenv';
                 database: config.get('DATABASE'),
                 entities:[
                     __dirname + '/../**/*.entity{.ts,.js}',
-                ]
+                ],
             })
         })
     ],
